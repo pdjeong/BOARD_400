@@ -1,0 +1,20 @@
+server:
+  port: 8001
+
+# HikariCP 데이터 소스(DataSource)
+spring:
+  application:
+    name: BOARD
+
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/pdjeongDB?serverTimezone=UTC&useUniCode=yes&characterEncoding=UTF-8
+      username: pdjeong
+      password: gmldI1978!
+      connection-test-query: SELECT NOW() FROM dual
+
+# Mybatis snake case to camel case
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
